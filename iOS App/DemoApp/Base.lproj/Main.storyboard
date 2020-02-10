@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeController" customModule="DemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vg3-Qd-aoL">
+                                <rect key="frame" x="0.0" y="20" width="414" height="87"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ciudad de Mexico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a6L-zo-peq">
+                                        <rect key="frame" x="109.5" y="28.5" width="195" height="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="a6L-zo-peq" firstAttribute="centerX" secondItem="vg3-Qd-aoL" secondAttribute="centerX" id="UGY-BT-FWF"/>
+                                    <constraint firstItem="a6L-zo-peq" firstAttribute="centerY" secondItem="vg3-Qd-aoL" secondAttribute="centerY" id="irq-bC-8aL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFM-TS-v3s" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vg3-Qd-aoL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Hi-Bx-Uym"/>
+                            <constraint firstItem="vg3-Qd-aoL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="8jp-GH-cl5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IFM-TS-v3s" secondAttribute="trailing" id="Crz-e9-OSe"/>
+                            <constraint firstItem="IFM-TS-v3s" firstAttribute="top" secondItem="vg3-Qd-aoL" secondAttribute="bottom" constant="-3" id="cR8-4M-0XU"/>
+                            <constraint firstItem="vg3-Qd-aoL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dWf-q3-vRX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IFM-TS-v3s" secondAttribute="bottom" id="dpu-GC-c5L"/>
+                            <constraint firstItem="IFM-TS-v3s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="fxe-aZ-uqv"/>
+                            <constraint firstItem="IFM-TS-v3s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yr3-co-Z55"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="a6L-zo-peq" id="3tb-lL-eo3"/>
+                        <outlet property="mapView" destination="IFM-TS-v3s" id="6vW-lT-4NK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
